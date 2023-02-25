@@ -1,6 +1,6 @@
 nav{
     align-items: center;
-    
+    padding: 7px 0px;
 }
 
 .nav{
@@ -13,8 +13,8 @@ nav{
 ul{
     margin-left: 100px;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 40px;
     align-items: center;
     list-style: none;
 }
@@ -26,5 +26,5 @@ ul li a{
     text-decoration: none;
 }
 .logo img{
-    width: 300px;
+    width: 220px;
 }
