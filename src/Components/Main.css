@@ -20,5 +20,45 @@
 }
 
 .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
     margin-top: 40px;
+}
+
+/* Card */
+.card{
+    border-radius: 16px 16px 0px 0px;
+    width: 300px;
+    height: 450px;
+    background-color: #EDEFEE;
+}
+.card-img img{
+    border-radius: 16px 16px 0px 0px;
+    width: 100%;
+    height: 200px;
+}
+
+.card-body{
+    padding: 15px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.desc{
+    color: #72827D;
+    margin-bottom: 100px;
+}
+
+.price{
+    color: #EEAC8E;
+}
+
+.card-body a{
+    text-decoration: none;
+    color: #434343;
+    margin-bottom: 0px;
 }

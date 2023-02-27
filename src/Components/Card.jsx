@@ -1,4 +1,5 @@
 import React from 'react'
+import './Main.css'
 
 const Card = ({img, name, price, desc }) => {
   return (
@@ -11,7 +12,7 @@ const Card = ({img, name, price, desc }) => {
                 <h3 className='name'>{name}</h3>
                 <p className='price'>{price}</p>
             </div>
-            <p>
+            <p className='desc'>
                 {desc}
             </p>
             <a href="" className='delivery'>Order a delivery</a>

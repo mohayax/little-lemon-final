@@ -1,0 +1,25 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #72827D;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    margin-top: 70px;
+}
+.f-logo img{
+    width: 50px;
+    height: 60px;
+}
+
+
+.copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}

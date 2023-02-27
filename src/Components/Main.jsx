@@ -38,6 +38,18 @@ const Main = () => {
         price="$12.99"
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, perspiciatis."
         />
+          <Card
+            img={lemondessert}
+            name="Greek Salad"
+            price="$12.99"
+            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, perspiciatis."
+          />
+          <Card
+            img={greekSalad}
+            name="Greek Salad"
+            price="$12.99"
+            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, perspiciatis."
+          />
         </div>
     </div>
     </div>
