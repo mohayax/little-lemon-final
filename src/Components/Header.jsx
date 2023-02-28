@@ -1,6 +1,9 @@
 import React from 'react';
 import header from '../../src/Assets/header.jpg';
 import './Header.css'
+import {
+    Link
+} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,7 +19,7 @@ const Header = () => {
                       recipes served with a modern
                       twist.
                 </div>
-                <a href="" className='reserve-table'>Reserve a Table</a>
+                <Link className='reserve-table' to={'/reservation'}>Reserve a Table</Link>
             </div>
             <div className="col-two">
                 <div className="header-img">

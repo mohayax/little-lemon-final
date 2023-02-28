@@ -3,6 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../src/Assets/logo.png'
 import './Navigation.css'
+import {
+  Link
+} from "react-router-dom";
 
 function NavigationBar() {
   return (
@@ -21,17 +24,21 @@ function NavigationBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-           
-              <Nav.Link href="#action1" className="me-5">Home</Nav.Link>
-            <Nav.Link href="#action2" className="me-5">About</Nav.Link>
+            {/* <Link className='n-link' to={'/'} href="#action1">Home</Link> */}
+
+            <Link  to={'/'} className="n-link me-5">Home</Link>
+            <Nav.Link href="#" className="me-5">About</Nav.Link>
           
             <Nav.Link href="#" className="me-5">
               Menu
             </Nav.Link>
-            <Nav.Link href="#" className="me-4">
-              Reservations
-            </Nav.Link>
-            <Nav.Link href="#" className="me-4">
+
+        
+              <Link  to={'/reservation'} className="n-link me-4">
+                Reservations
+              </Link>
+  
+            <Nav.Link href="#" className="me-4" disabled>
               Order Online
             </Nav.Link>
               <Nav.Link href="#" className="m">

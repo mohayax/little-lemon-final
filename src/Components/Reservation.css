@@ -1,0 +1,21 @@
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container{
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.form-img img{
+    width: 400px;
+}
+
+.col_one{
+    width: 400px;
+}
+

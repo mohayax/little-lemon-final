@@ -30,6 +30,17 @@ ul li a{
     width: 220px;
 }
 
+.n-link {
+    padding: 8px;
+    /* line-height: 25px;
+    height: 25px; */
+    text-decoration: none;
+    /* font-family: 'Red Rose';
+    font-style: normal; */
+    color: gray;
+    /* margin: 15px; */
+}
+
 @media (max-width: 700px){
     .logo img {
             width: 150px;
