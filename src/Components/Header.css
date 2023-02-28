@@ -1,5 +1,5 @@
 header{
-    height: 40vh;
+    height: 43vh;
     background-color: #495E57;
 }
 
@@ -9,6 +9,7 @@ header{
     margin-right: auto;
     width: 70vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
    
 }
@@ -43,8 +44,8 @@ color: white;
     color: white;
     /* font-weight: 100; */
     letter-spacing: 1px;
-   line-height: 23px;
-    margin-top: 20px;
+   line-height: 20px;
+    margin-top: 10px;
     font-size: 18px;
     width: 250px;
 }
@@ -59,4 +60,24 @@ color: white;
     border-radius: 16px;
     color: black;
     font-weight: 500;
+}
+
+@media (max-width: 700px) {
+    .header {
+        width: 90vw;
+    }
+    .col-two{
+        display: none;
+    }
+        header {
+            height: 40vh;}
+
+}
+@media (max-width: 800px) {
+    .header {
+            width: 70vw;
+        }
+    .col-two{
+        width: 220px;
+    }
 }

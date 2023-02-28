@@ -29,7 +29,10 @@ const Main = () => {
     <div className='main'>
         <div className="main-head">
         <h1>This Weeks Speacial!</h1>
-        <a href="" className='btn'>Online Menu</a>
+        
+        <a href="" className='menubtn'>
+          Online Menu
+          </a>
         </div>
         <div className='cards'>
         <Card

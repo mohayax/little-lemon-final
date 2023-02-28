@@ -6,6 +6,7 @@ nav{
 .nav{
     display: flex;
     width: 70vw;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
 }
@@ -27,4 +28,18 @@ ul li a{
 }
 .logo img{
     width: 220px;
+}
+
+@media (max-width: 700px){
+    .logo img {
+            width: 150px;
+        }
+
+                .nav {
+                    display: flex;
+                    width: 90vw;
+                    justify-content: space-between;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
 }

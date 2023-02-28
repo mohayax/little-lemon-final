@@ -10,7 +10,7 @@ const Footer = () => {
                 <img src={footer} alt="logo" srcset="" />
             </div>
           <div className='copy'>
-            <p>&copy; 2023 Little Lemon Restaurant. All Rights Reserved!</p>
+            <p>&copy; 2023 Little Lemon Restaurant.</p>
         </div>
        
     </footer>

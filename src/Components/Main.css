@@ -4,12 +4,16 @@
     margin-right: auto;
     margin-top: 120px;
 }
+
+
 .main-head{
     display: flex;
     justify-content: space-between;
+    font-weight: 400;
 }
-.btn{
+.menubtn{
     width: 150px;
+    justify-content: center;
         text-decoration: none;
         text-align: center;
         padding: 10px 10px;
@@ -50,7 +54,7 @@
 
 .desc{
     color: #72827D;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .price{
@@ -62,3 +66,47 @@
     color: #434343;
     margin-bottom: 0px;
 }
+
+@media (max-width: 800px) {
+    .main {
+        width: 70vw;
+        margin-top: 40px;
+    }
+
+    .main-head h1 {
+        font-size: 30px;
+    }
+
+    .menubtn {
+        width: auto;
+        padding: auto;
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: auto;
+        margin-top: 40px;
+    }
+        .card {
+            width: 400px;
+        }
+}
+
+@media (max-width: 880px){
+    .main {
+            width: 80vw;
+            margin-top: 40px;
+        }
+    .cards {
+        display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .card {
+                    width: 330px;
+                }
+}
+

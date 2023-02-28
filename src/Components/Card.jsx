@@ -1,5 +1,6 @@
 import React from 'react'
 import './Main.css'
+import { MdDeliveryDining } from "react-icons/md";
 
 const Card = ({img, name, price, desc }) => {
   return (
@@ -15,7 +16,10 @@ const Card = ({img, name, price, desc }) => {
             <p className='desc'>
                 {desc}
             </p>
-            <a href="" className='delivery'>Order a delivery</a>
+              <a href="" className='delivery'>
+                Order a delivery  
+              <MdDeliveryDining/>
+              </a>
         </div>
     </div>
   )
