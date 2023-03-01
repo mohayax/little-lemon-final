@@ -12,6 +12,8 @@
     font-weight: 400;
 }
 .menubtn{
+    outline: none;
+    border: none;
     width: 150px;
     justify-content: center;
         text-decoration: none;

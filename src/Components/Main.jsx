@@ -30,9 +30,9 @@ const Main = () => {
         <div className="main-head">
         <h1>This Weeks Speacial!</h1>
         
-        <a href="" className='menubtn'>
+        <button  className='menubtn'>
           Online Menu
-          </a>
+          </button>
         </div>
         <div className='cards'>
         <Card

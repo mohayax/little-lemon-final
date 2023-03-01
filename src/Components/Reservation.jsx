@@ -4,6 +4,7 @@ import './Reservation.css'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { maxHeight } from '@mui/system';
 
 
        
@@ -12,23 +13,22 @@ import Button from '@mui/material/Button';
 const Reservation = () => {
   return (
     <main>
-        <div className='heading'>
-            <h1>Book a table</h1>
-        </div>
         <div className="form-container">
+        
         <div className="col_one">
+          <h1>Booking</h1>
             <Box
                 component="form"
                   //   sx={{
                   //     //   '& .MuiTextField-root': { m: 1, width: '25ch' },
                   //   }}
                 sx={{
-                    width: 500,
-                    maxWidth: '100%',
+                    // width: 500,
+                    maxWidth: '100%'
                 }}
                 autoComplete="off"
             >
-            <div lassName='inputs'>
+            <div className='inputs'>
                     <TextField
                         required
                         id="outlined-required"
@@ -51,12 +51,11 @@ const Reservation = () => {
                         fullWidth label="No of People"
                         required
                         id="fullWidth" type="number" />
-                      <div lassName='inputs'>
+                      <div className='inputs'>
                       <TextField
                           required
                           id="outlined-required"
                           label="First Name"
-                          defaultValue="Hello World"
                         className='text-field'
                       />
                       <TextField
@@ -82,13 +81,16 @@ const Reservation = () => {
                           />
                       </div>
               </Box>
-            <Button variant="contained">Contained</Button>
+            <Button className='form-btn'
+             fullWidth
+             type='submit'
+             >Book</Button>
         </div>
 
         <div className="col_two">
-            <div className="form-img">
-                <img src={dining} alt="table image" srcset="" />
-            </div>
+           
+                <img src={dining} alt="table" srcset="" />
+            
         </div>
         </div>
       </main>

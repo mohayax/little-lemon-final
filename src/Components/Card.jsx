@@ -17,7 +17,7 @@ const Card = ({img, name, price, desc }) => {
                 {desc}
             </p>
               <a href="" className='delivery'>
-                Order a delivery  
+                Order a delivery<span className='me-4'></span>
               <MdDeliveryDining/>
               </a>
         </div>
