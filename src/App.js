@@ -1,11 +1,11 @@
 import './App.css';
 import NavigationBar from './Components/NavigationBar';
-import Reservation from './Components/Reservation';
+import BookingPage from './Components/BookingPage';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import {
   BrowserRouter as Router,
-  Routes, Route, Link
+  Routes, Route
 } from "react-router-dom"
 
 
@@ -18,7 +18,7 @@ function App() {
       </div>
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/booking" element={<BookingPage />} />
         </Routes>
 
         <div>

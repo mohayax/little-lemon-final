@@ -34,8 +34,8 @@ function NavigationBar() {
             </Nav.Link>
 
         
-              <Link  to={'/reservation'} className="n-link me-4">
-                Reservations
+              <Link  to={'/booking'} className="n-link me-4">
+                Bookings
               </Link>
   
             <Nav.Link href="#" className="me-4" disabled>

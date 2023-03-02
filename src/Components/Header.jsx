@@ -19,7 +19,7 @@ const Header = () => {
                       recipes served with a modern
                       twist.
                 </div>
-                <Link className='reserve-table' to={'/reservation'}>Reserve a Table</Link>
+                <Link className='reserve-table' to={'/booking'}>Reserve a Table</Link>
             </div>
             <div className="col-two">
                 <div className="header-img">
