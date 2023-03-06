@@ -1,20 +1,95 @@
-import React from 'react'
-
 import './Reservation.css'
+import { useEffect, useReducer, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom'
 
-const BookingForm = () => {
 
+// const initializeTimes = { times: [] };
+
+// const bookingReducer = (state, action) => {
+//     switch (action.type) {
+//         case "changeTime":
+//             return {
+//                 times:
+//                     state.times = [
+//                         { time: "12:00 PM", available: false },
+//                         { time: "1:00 PM", available: true },
+//                         { time: "2:00 PM", available: false },
+//                         { time: "3:00 PM", available: false },
+//                         { time: "4:00 PM", available: true },
+//                         { time: "5:00 PM", available: false }
+//                     ]
+//             }
+//         default:
+//             throw new Error('Error occured in changing time');
+//     }
+// }
+
+const updateTimes = (date) => {
+    const times = [
+        { time: "12:00 PM", available: true },
+        { time: "1:00 PM", available: false },
+        { time: "2:00 PM", available: true },
+        { time: "3:00 PM", available: true },
+        { time: "4:00 PM", available: false },
+        { time: "5:00 PM", available: true }
+    ];
+    // setAvailableTimes(times);
+};
+
+const initializeTimes = {
+    availableTimes: []
+}
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "updateTimes":
+            const date = action.payload;
+            // availableTimes = updateTimes(date);
+            return state;
+        default:
+            return state;
+    }
+};
+
+
+
+
+const BookingForm = ({updateTimes}) => {
+    const naviagte = useNavigate();
+    const [data, setData] = useState();
+    
+    // Date
+    const [availableTimes, dispatch] = useReducer(reducer,  initializeTimes);
+    
+    const handleDateChange = (event) => {
+        const date = new Date(event.target.value);
+        dispatch({ type: "updateTimes", payload: date });
+    };
+
+    console.log("data", data);
+
+    // const displayData = (data) => {
+    //     console.log("data", data);
+    //     alert(JSON.stringify(data));
+    // }
+    
+    // submit api data
+    const submitForm = () => {
+
+    }
+    
+    // form validation
     const phoneRegExp =
         /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
     const validate = Yup.object({
-        date: Yup.date()
-            .required('Must enter a date'),
+        // date: Yup.date()
+        //     .required('Must enter a date'),
 
         time: Yup.string()
             .required('Must enter time'),
@@ -53,9 +128,18 @@ const BookingForm = () => {
 
 
         validationSchema: validate,
-        onSubmit: (values, { resetForm }) => {
-            resetForm(values = '')
-        }
+        onSubmit: ((values, {resetForm}) => {
+            window.submitAPI(JSON.stringify(values, null, 2));
+            // alert(data);
+            naviagte("/booking-confirm");
+            resetForm(values = '');
+        })
+        
+        
+        // (values) => {
+        //     setData(values);
+        //     naviagte("/booking-confirm")
+        // }
     })
 
   return (
@@ -81,10 +165,9 @@ const BookingForm = () => {
                       type='date'
                       name='date'
                       className='text-field'
-                      value={formik.values.date}
-                      onChange={formik.handleChange}
-                      error={formik.touched.date && Boolean(formik.errors.date)}
-                      helperText={formik.touched.date && formik.errors.date}
+                      onChange={handleDateChange}
+                    //   error={formik.touched.date && Boolean(formik.errors.date)}
+                    //   helperText={formik.touched.date && formik.errors.date}
                       onBlur={formik.handleBlur}
                   />
                   <TextField
@@ -96,7 +179,7 @@ const BookingForm = () => {
                       type="time"
                       onBlur={formik.handleBlur}
                       value={formik.values.time}
-                      onChange={formik.handleChange}
+                      onChange={(event) => updateTimes(event.target.value)}
                       error={formik.touched.time && Boolean(formik.errors.time)}
                       helperText={formik.touched.time && formik.errors.time}
                       className='text-field'
@@ -170,10 +253,13 @@ const BookingForm = () => {
                   />
               </div>
           </Box>
-          <Button className='form-btn'
-              fullWidth
-              type='submit'
-          >Book</Button>
+          <Button
+            className='form-btn'
+            fullWidth
+            type='submit'
+          >
+            Book
+           </Button>
       </form>
   )
 }

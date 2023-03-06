@@ -27,9 +27,9 @@ function NavigationBar() {
             {/* <Link className='n-link' to={'/'} href="#action1">Home</Link> */}
 
             <Link  to={'/'} className="n-link me-5">Home</Link>
-            <Nav.Link href="#" className="me-5">About</Nav.Link>
+            <Nav.Link href="#" className="me-5" disabled>About</Nav.Link>
           
-            <Nav.Link href="#" className="me-5">
+            <Nav.Link href="#" className="me-5" disabled>
               Menu
             </Nav.Link>
 
@@ -41,7 +41,7 @@ function NavigationBar() {
             <Nav.Link href="#" className="me-4" disabled>
               Order Online
             </Nav.Link>
-              <Nav.Link href="#" className="m">
+              <Nav.Link href="#" className="m" disabled>
                 Log In
               </Nav.Link>
         

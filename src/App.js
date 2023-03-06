@@ -3,6 +3,8 @@ import NavigationBar from './Components/NavigationBar';
 import BookingPage from './Components/BookingPage';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
+import ConfirmedBooking from './Components/ConfirmedBooking';
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes, Route
@@ -10,6 +12,7 @@ import {
 
 
 function App() {
+
   return (
     <>
     <Router>
@@ -18,7 +21,8 @@ function App() {
       </div>
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<BookingPage />} />
+          <Route path="/booking" element={<BookingPage />} />
+          <Route path="/booking-confirm" element={<ConfirmedBooking />} />
         </Routes>
 
         <div>
