@@ -8,26 +8,6 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom'
 
 
-// const initializeTimes = { times: [] };
-
-// const bookingReducer = (state, action) => {
-//     switch (action.type) {
-//         case "changeTime":
-//             return {
-//                 times:
-//                     state.times = [
-//                         { time: "12:00 PM", available: false },
-//                         { time: "1:00 PM", available: true },
-//                         { time: "2:00 PM", available: false },
-//                         { time: "3:00 PM", available: false },
-//                         { time: "4:00 PM", available: true },
-//                         { time: "5:00 PM", available: false }
-//                     ]
-//             }
-//         default:
-//             throw new Error('Error occured in changing time');
-//     }
-// }
 
 const updateTimes = (date) => {
     const times = [
@@ -71,17 +51,9 @@ const BookingForm = ({updateTimes}) => {
         dispatch({ type: "updateTimes", payload: date });
     };
 
-    console.log("data", data);
 
-    // const displayData = (data) => {
-    //     console.log("data", data);
-    //     alert(JSON.stringify(data));
-    // }
+   
     
-    // submit api data
-    const submitForm = () => {
-
-    }
     
     // form validation
     const phoneRegExp =
@@ -129,17 +101,13 @@ const BookingForm = ({updateTimes}) => {
 
         validationSchema: validate,
         onSubmit: ((values, {resetForm}) => {
-            window.submitAPI(JSON.stringify(values, null, 2));
+            // window.submitAPI(JSON.stringify(values, null, 2));
             // alert(data);
             naviagte("/booking-confirm");
             resetForm(values = '');
         })
         
-        
-        // (values) => {
-        //     setData(values);
-        //     naviagte("/booking-confirm")
-        // }
+       
     })
 
   return (
@@ -147,9 +115,7 @@ const BookingForm = ({updateTimes}) => {
           <h1>Booking</h1>
           <Box
               component="form"
-              //   sx={{
-              //     //   '& .MuiTextField-root': { m: 1, width: '25ch' },
-              //   }}
+              
               sx={{
                   // width: 500,
                   maxWidth: '100%'
@@ -179,7 +145,7 @@ const BookingForm = ({updateTimes}) => {
                       type="time"
                       onBlur={formik.handleBlur}
                       value={formik.values.time}
-                      onChange={(event) => updateTimes(event.target.value)}
+                      onChange={formik.handleChange}
                       error={formik.touched.time && Boolean(formik.errors.time)}
                       helperText={formik.touched.time && formik.errors.time}
                       className='text-field'
